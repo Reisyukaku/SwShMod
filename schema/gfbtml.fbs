@@ -1,0 +1,12 @@
+namespace SwSh;
+
+table Event {
+t:uint;
+j:string;
+}
+
+table TML {
+    Events:[Event];
+}
+
+root_type TML;

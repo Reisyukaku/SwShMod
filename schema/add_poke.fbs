@@ -1,0 +1,52 @@
+namespace SwSh;
+
+enum Pokemon : uint {
+    NONE = 0,
+    Charmander = 4,
+    Pikachu = 25,
+    Eevee = 133,
+    TypeNull = 772,
+    Grookey = 810,
+    Scorbunny = 813,
+    Sobble = 816,
+    Toxel = 848,
+    Dracozolt = 880,
+    Arctozolt = 881,
+    Dracovish = 882,
+    Arctovish = 883,
+}
+
+table Entry {
+    unk0:uint;
+    unk1:uint;
+    unk2:uint;
+    Ball:uint;
+    unk4:uint;
+    Hash1:ulong;
+    Gigantimax:bool;
+    unk7:uint;
+    Level:byte;
+    Species:Pokemon;
+    unk10:uint;
+    unk11:uint;
+    unk12:uint;
+    unk13:uint;
+    unk14:uint;
+    Hash2:ulong;
+    unk16:uint;
+    ShinyLock:uint;
+    Nature:uint;
+    unk19:uint;
+    IV_HP:byte;
+    IV_ATK:byte;
+    IV_DEF:byte;
+    IV_SPA:byte;
+    IV_SPD:byte;
+    IV_SPE:byte;
+}
+
+table AddPoke {
+    Entries:[Entry];
+}
+
+root_type AddPoke;

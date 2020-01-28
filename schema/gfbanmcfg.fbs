@@ -1,0 +1,176 @@
+namespace Gfbanimcfg;
+
+//Template based on https://github.com/healingbrew/Dragapult/blob/87b8d0dcbd0070a68801d7b76ebe0816a0c71277/Dragapult/Models/fbs/PokemonAnimationConfig.fbs
+
+union AnimationStateNodeVariantDataUnion {
+    IntValue = 1,
+    FloatValue = 2,
+    UShortValue = 3,
+    ByteValue = 4,
+}
+
+table AnimationConfig {
+    GroupData:GroupList;
+	AnchorPointData:anchorPoints;
+	Unknown:int;
+	Unknown2:int;
+    StateData:AnimationStates;
+    InitialData:InitialData;
+    AnimationData:Animations;
+}
+
+table anchorPoints {
+    AnchorPoints:[AnchorPoint];
+}
+
+table AnchorPoint {
+    Name:string;
+    Easing:int;
+    RangeX:Vector2;
+    RangeY:Vector2;
+    Speed:float;
+}
+
+table GroupList {
+    Groups:[Group];
+	Influences:ObjectReference;
+}
+
+table Group {
+     Id:uint;
+	 Name:string;
+	 Objects:ObjectReference;
+}
+
+table ObjectReference {
+	 Bones:StringData;
+	 Meshes:MeshData;
+	 SubMeshes:StringData;
+}
+
+table AnimationStates {
+    States:[AnimationStateMachine];
+}
+
+table AnimationStateMachine {
+    Name:string;
+    Root:AnimationStateNode;
+}
+
+enum AnimationStateNodeType:uint {
+    Unknown = 0,
+    Normal = 1,
+    Wildcard = 3,
+    Root = 4
+}
+
+table AnimationStateNode {
+    Path:string;
+    Type:AnimationStateNodeType;
+    WorldSpace:string;
+    Animation:AnimationStateAnimation;
+    NextStates:[AnimationStateNodeVariant];
+    ChildNodes:[AnimationStateNode];
+}
+
+table AnimationStateAnimation {
+    WorldSpace:string;
+    Name:StringValue;
+    Speed:float;
+}
+
+table AnimationStateNodeVariant {
+    Path:string;
+    Unknown2:int;
+    Unknown3:float;
+    Unknown4:float;
+    Unknown5:float;
+    Unknown6:int;
+    Data:[AnimationStateNodeVariantData];
+    Unknown8:int;
+    Unknown9:int;
+}
+
+table AnimationStateNodeVariantData {
+    Name:string;
+    Unknown2:AnimationStateNodeVariantDataUnknown;
+    Value:AnimationStateNodeVariantDataUnion;
+}
+
+table AnimationStateNodeVariantDataUnknown {
+    Unknown1:uint;
+}
+
+table InitialData {
+    States:[InitialState];
+    Values:[InitialValue];
+    Variants:[StringValue];
+    Easings:[StringValue];
+}
+
+table InitialState {
+    Name:string;
+    Override:bool;
+    Value:int;
+}
+
+table InitialValue {
+    Name:string;
+    Override:bool;
+    Value:float;
+}
+
+
+table Animations {
+    References:[AnimationReference];
+}
+
+table AnimationReference {
+    Name:string;
+    Path:string;
+}
+
+
+table StringData {
+     Type:ubyte;
+	 Strings:[StringValue];
+}
+
+table MeshData {
+     Type:ubyte;
+	 Value:[MeshValue];
+}
+
+table MeshValue {
+    Name:string;
+	Flag:ByteValue;
+	Properties:StringData;
+	EmtpyStrings:StringData;
+}
+
+table StringValue {
+    Value:string;
+}
+
+table IntValue {
+    Value:int;
+}
+
+table FloatValue {
+    Value:float;
+}
+
+table ByteValue {
+    Value:ubyte;
+}
+
+table UShortValue {
+    Value:ushort;
+}
+
+struct Vector2 {
+    X:float;
+    Y:float;
+}
+
+root_type AnimationConfig;

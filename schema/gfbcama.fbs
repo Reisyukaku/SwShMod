@@ -1,0 +1,64 @@
+namespace SwSh;
+
+table animConfig {
+    Unknown:uint;
+    KeyFrames:uint;
+    FramesPerSecond:uint;
+}
+
+table Anim {
+    Cam:string;
+    Settings:settings;
+    unkTable2:tab2;
+    unkTable3:tab3;
+}
+
+table floatValue {
+    Value:float;
+}
+
+table settings {
+    unkset0:byte;
+    unksetVal0:floatValue;
+    unkset1:byte;
+    RenderDistance:floatValue;
+    unkset2:byte;
+    unksetVal2:floatValue;
+}
+
+table tab2 {
+    unkType0:byte;
+    unkVal0:floatValue;
+    unkType1:byte;
+    unkVal1:floatValue;
+    unkType2:byte;
+    unkVal2:floatValue;
+    unkType3:byte;
+    unkVal3:floatValue;
+    unkType4:byte;
+    unkVal4:floatValue;
+    unkType5:byte;
+    unkVal5:floatValue;
+    unkType6:byte;
+    unkVal6:floatValue;
+}
+
+table tab3 {
+    unk0:byte;
+    unkV0:floatValue;
+    unk1:byte;
+    unkV1:floatValue;
+    unk2:byte;
+    unkV2:floatValue;   
+}
+
+table tab6 {
+
+}
+
+table CameraAnim {
+    AnimConfig:animConfig;
+    Animation:Anim;
+}
+
+root_type CameraAnim;

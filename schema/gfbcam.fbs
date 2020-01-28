@@ -1,0 +1,26 @@
+namespace SwSh;
+
+table tab2 {
+    f0:uint;
+    f1:float;
+    f2:float;
+    f3:float;
+}
+
+table Camera {
+    Cam:string;
+    unk1:uint;
+    unk2:float;
+    RenderDistance:float;
+    unk4:float;
+    unk5:float;
+    unk6:float;
+    unk7:float;
+    unk8:uint;
+    unk9:float;
+    unk10:tab2;
+    unk11:float;
+    unk12:float;
+}
+
+root_type Camera;

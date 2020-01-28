@@ -1,0 +1,15 @@
+namespace SwSh;
+
+table BattleCommonFieldParam {
+    unk0:uint;
+    unk1:uint;
+    unk2:uint;
+    unk3:uint;
+    unk4:uint;
+    unk5:uint;
+    f1:float;
+    f2:float;
+    f3:float;
+}
+
+root_type BattleCommonFieldParam;

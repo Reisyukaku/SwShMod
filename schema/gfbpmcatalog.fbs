@@ -1,0 +1,35 @@
+namespace SwSh;
+
+enum Gend : byte {Male = 0, Female =  1}
+
+table Meta {
+    Species:ushort = 0;
+    AltForm:ushort = 0; 
+    Gender:Gend = Male;
+    Shiny:bool = false;
+}
+
+table Anim {
+    Name:string;
+    Path:string;
+}
+
+table Pkmn {
+    Metadata:Meta;
+    ModelPath:string;
+    ConfigPath:string;
+    ArchivePath:string;
+    Animations:[Anim];
+}
+
+table Ver {
+    Major:uint;
+    Minor:uint;
+}
+
+table Catalog {
+    Version:Ver;
+    Pokemon:[Pkmn];
+}
+
+root_type Catalog;

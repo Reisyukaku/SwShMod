@@ -1,0 +1,56 @@
+namespace SwSh;
+
+table Entry {
+    unk0:float;
+    unk1:float;
+    unk2:float;
+    unk3:float;
+    unk4:uint;
+    unk5:uint;
+    unk6:float;
+    unk7:float;
+    unk8:float;
+    unk9:float;
+    unk10:float;
+    unk11:float;
+    unk12:float;
+    unk13:float;
+    unk14:float;
+    unk15:float;
+    unk16:float;
+    unk17:float;
+    unk18:float;
+    unk19:float;
+    unk20:float;
+    unk21:float;
+    unk22:float;
+    unk23:float;
+    unk24:float;
+    unk25:float;
+    unk26:float;
+    unk27:float;
+    unk28:float;
+    unk29:float;
+    unk30:float;
+    unk31:float;
+    unk32:float;
+    unk33:uint;
+    unk34:uint;
+    unk35:float;
+    unk36:float;
+    unk37:float;
+    unk38:float;
+    unk39:float;
+    unk40:float;
+    unk41:float;
+    unk42:float;
+    unk43:float;
+    unk44:float;
+    unk45:float;
+}
+
+table MonParam {
+    Entries:[Entry];
+}
+
+root_type MonParam;

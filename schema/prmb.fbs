@@ -1,0 +1,26 @@
+namespace SwSh;
+
+table Entry {
+    unk:int;
+    unk2:int;
+    unk3:int;
+    unk4:int;
+}
+
+table Entry2 {
+    b1:byte;
+    b2:byte;
+}
+
+table Entry3 {
+    hash:ulong;
+    num:uint;
+}
+
+table PRMB {
+    Entries:[Entry];
+    Entries2:[Entry2];
+    Entries3:[Entry3];
+}
+
+root_type PRMB;

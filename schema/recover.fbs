@@ -1,0 +1,24 @@
+namespace SwSh;
+
+table Pos {
+    unk1:int = 0;
+    unk2:int = 0;
+    x:float = 0;
+    y:float = 0;
+    z:float = 0;
+    yaw:float = 0;
+    Scale:float = 0;
+}
+
+table Entry { 
+    AltForm:uint;
+    Species:uint;
+    unk:int (deprecated);
+    Position:Pos (original_order);
+}
+
+table Recovery {
+    Entries:[Entry];
+}
+
+root_type Recovery;

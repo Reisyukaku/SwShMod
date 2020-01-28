@@ -1,0 +1,20 @@
+namespace SwSh;
+
+table Vec3 {
+    X:float;
+    Y:float;
+    Z:float;
+}
+
+table Entry {
+    unk0:byte;
+    Bone:string;
+    unk2:float;
+    Vector3:Vec3;
+}
+
+table CampBall {
+    Entries:[Entry];
+}
+
+root_type CampBall;

@@ -1,0 +1,43 @@
+namespace SwSh;
+
+table Vec5 {
+    f0:float;
+    f1:float;
+    f2:float;
+    f3:float;
+    f4:float;
+}
+
+table Vec3 {
+    X:float;
+    Y:float;
+    Z:float;
+}
+
+table tab3 {
+    Vector3:Vec3;
+    uu1:float;
+    uu2:float;
+    uu3:float;
+    Vector5:Vec5;
+}
+
+table tab2 {
+    u0:tab3;
+    u1:float;
+    u2:uint;
+    u3:float;
+    u4:uint;
+}
+
+table tab1 {
+    unk1:uint;
+}
+
+table CampCommon {
+    table1:tab1;
+    table2:tab2;
+    unk0:uint;
+}
+
+root_type CampCommon;

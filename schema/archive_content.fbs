@@ -1,0 +1,12 @@
+namespace SwSh;
+
+table Dirs {
+    FileHash:ulong;
+    ContentHashes:[ulong];
+}
+
+table ArchiveCont {
+    Archive:[Dirs];
+}
+
+root_type ArchiveCont;

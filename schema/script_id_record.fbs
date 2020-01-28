@@ -1,0 +1,13 @@
+namespace SwSh;
+
+table Script {
+    Hash:uint64;
+    Amx:string;
+    Dat:string;
+}
+
+table ScriptRecord {
+    Scripts:[Script];
+}
+
+root_type ScriptRecord;
