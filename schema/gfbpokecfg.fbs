@@ -1,36 +1,61 @@
 namespace SwSh;
 
-table PokeConfig {
-    unk:int;
-    unk2:int;
-    Species:ushort;
-    Form:ushort;
-    test5:int;
-    test6:int;
-    test7:float;
-    test8:uint;
-    test9:float;
-    test0:float;
-    test11:float;
-    test13:float;
-    test14:float;
-    test15:float;
-    test16:float;
-    test17:float;
-    test18:float;
-    test19:float;
-    test10:float;
-    test21:float;
-    test31:float;
-    test41:float;
-    test51:float;
-    test61:float;
-    test71:float;
-    test81:float;
-    test91:float;
-    test01:float;
-    test001:int;
-    test0001:int;
+table meshEntry {
+  isEnabled:uint8;
+  meshName:string;
 }
 
-root_type PokeConfig;
+table meshEntries {
+  entry:[meshEntry];
+}
+
+table meshTable {
+  undef_0:uint32;
+  meshTable:[meshEntries];
+}
+
+table materialEntry {
+  materialName:string;
+}
+
+table dummyTable1 {
+  
+}
+
+table dummyTable2 {
+  
+}
+
+table gfbpokecfg {
+  unk_0:int;
+  undef_1:uint32;
+  SpeciesID:uint16;
+  FormID:uint16;
+  unk_4:dummyTable1 (required);
+  unk_5:dummyTable2 (required);
+  unk_6:uint8;
+  unk_7:uint8;
+  unk_8:float;
+  unk_9:float;
+  unk_10:float;
+  unk_11:float;
+  unk_12:float;
+  unk_13:float;
+  unk_14:float;
+  unk_15:float;
+  unk_16:float;
+  unk_17:float;
+  unk_18:float;
+  unk_19:float;
+  unk_20:float;
+  unk_21:float;
+  unk_22:float;
+  undef_23:uint16;
+  unk_24:float;
+  unk_25:float;
+  undef_26:uint32;
+  undef_27:uint32;
+  MaterialEntries:[materialEntry];
+  MeshTable:meshTable;
+}
+root_type gfbpokecfg;
