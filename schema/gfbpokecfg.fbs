@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "gfbpokecfg";
+
 table meshEntry {
   isEnabled:uint8;
   meshName:string;

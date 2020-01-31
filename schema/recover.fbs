@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "bin";
+
 table Pos {
     unk1:int = 0;
     unk2:int = 0;

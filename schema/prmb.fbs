@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "prmb";
+
 table Entry {
     unk:int;
     unk2:int;

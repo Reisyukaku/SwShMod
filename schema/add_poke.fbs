@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "bin";
+
 enum Pokemon : uint {
     NONE = 0,
     Charmander = 4,

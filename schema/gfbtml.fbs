@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "gfbtml";
+
 table Event {
 t:uint;
 j:string;

@@ -1,5 +1,7 @@
 namespace SwSh;
 
+file_extension "gfbgpokecfg";
+
 table PokeGConfig {
     unk:int;
     unk2:int;

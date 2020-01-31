@@ -7,12 +7,9 @@ build := build
 all:
 	@mkdir -p $(build)/bin/pokemon/table/
 	@mkdir -p $(build)/bin/field/param/pokecenter/
-	$(tools)/flatc -b $(schema)/gfbpmcatalog.fbs $(src)/poke_resource_table.json
-	$(tools)/flatc -b $(schema)/gfbpmcatalog.fbs $(src)/gpoke_resource_table.json
-	$(tools)/flatc -b $(schema)/recover.fbs $(src)/recovery.json
-	@mv poke_resource_table.bin $(build)/bin/pokemon/table/poke_resource_table.gfbpmcatalog
-	@mv gpoke_resource_table.bin $(build)/bin/pokemon/table/gpoke_resource_table.gfbpmcatalog
-	@mv recovery.bin $(build)/bin/field/param/pokecenter/recovery.bin
+	$(tools)/flatc -o $(build)/bin/pokemon/table/ -b $(schema)/gfbpmcatalog.fbs $(src)/misc/poke_resource_table.json
+	$(tools)/flatc -o $(build)/bin/pokemon/table/ -b $(schema)/gfbpmcatalog.fbs $(src)/misc/gpoke_resource_table.json
+	$(tools)/flatc -o $(build)/bin/field/param/pokecenter/ -b $(schema)/recover.fbs $(src)/misc/recovery.json
     
 .PHONY: clean
 clean:

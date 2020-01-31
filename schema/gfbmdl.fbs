@@ -1,5 +1,7 @@
 namespace Gfbmdl;
 
+file_extension "gfbmdl";
+
 enum BoneType : uint {
    NoSkinning = 0,
    HasSkinning = 1,

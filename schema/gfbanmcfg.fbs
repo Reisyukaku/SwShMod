@@ -1,6 +1,7 @@
 namespace Gfbanimcfg;
 
 //Template based on https://github.com/healingbrew/Dragapult/blob/87b8d0dcbd0070a68801d7b76ebe0816a0c71277/Dragapult/Models/fbs/PokemonAnimationConfig.fbs
+file_extension "gfbanmcfg";
 
 union AnimationStateNodeVariantDataUnion {
     IntValue = 1,

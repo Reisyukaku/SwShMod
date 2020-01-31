@@ -1,5 +1,7 @@
 namespace Gfbanim;
 
+file_extension "gfbanm";
+
 union TriggerParams { 
 TriggerParameterInt , TriggerParameterFloat,
 TriggerParameterByte, TriggerParameterString 
