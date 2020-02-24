@@ -679,6 +679,81 @@
         }
       ]
     },
+	{
+      Metadata: {
+        Species: 13,
+        AltForm: 0,
+        Gender: "Male",
+        Shiny: true
+      },
+      ModelPath: "bin/pokemon/pm0013_00/mdl/pm0013_00_rare.gfbmdl",
+      ConfigPath: "bin/pokemon/pm0013_00/pm0013_00.gfbpokecfg",
+      ArchivePath: "bin/archive/pokemon/pm0013_00.gfpak",
+      Animations: [
+        {
+          Name: "battle",
+          Path: "bin/pokemon/pm0013_00/anm/pm0013_00_battle.gfbanmcfg"
+        },
+        {
+          Name: "camp",
+          Path: "bin/pokemon/pm0013_00/anm/pm0013_00_camp.gfbanmcfg"
+        },
+        {
+          Name: "field",
+          Path: "bin/pokemon/pm0013_00/anm/pm0013_00_field.gfbanmcfg"
+        }
+      ]
+    },
+	{
+      Metadata: {
+        Species: 14,
+        AltForm: 0,
+        Gender: "Male",
+        Shiny: true
+      },
+      ModelPath: "bin/pokemon/pm0014_00/mdl/pm0014_00_rare.gfbmdl",
+      ConfigPath: "bin/pokemon/pm0014_00/pm0014_00.gfbpokecfg",
+      ArchivePath: "bin/archive/pokemon/pm0014_00.gfpak",
+      Animations: [
+        {
+          Name: "battle",
+          Path: "bin/pokemon/pm0014_00/anm/pm0014_00_battle.gfbanmcfg"
+        },
+        {
+          Name: "camp",
+          Path: "bin/pokemon/pm0014_00/anm/pm0014_00_camp.gfbanmcfg"
+        },
+        {
+          Name: "field",
+          Path: "bin/pokemon/pm0014_00/anm/pm0014_00_field.gfbanmcfg"
+        }
+      ]
+    },
+	{
+      Metadata: {
+        Species: 15,
+        AltForm: 0,
+        Gender: "Male",
+        Shiny: true
+      },
+      ModelPath: "bin/pokemon/pm0015_00/mdl/pm0015_00_rare.gfbmdl",
+      ConfigPath: "bin/pokemon/pm0015_00/pm0015_00.gfbpokecfg",
+      ArchivePath: "bin/archive/pokemon/pm0015_00.gfpak",
+      Animations: [
+        {
+          Name: "battle",
+          Path: "bin/pokemon/pm0015_00/anm/pm0015_00_battle.gfbanmcfg"
+        },
+        {
+          Name: "camp",
+          Path: "bin/pokemon/pm0015_00/anm/pm0015_00_camp.gfbanmcfg"
+        },
+        {
+          Name: "field",
+          Path: "bin/pokemon/pm0015_00/anm/pm0015_00_field.gfbanmcfg"
+        }
+      ]
+    },
     {
       Metadata: {
         Species: 12,
