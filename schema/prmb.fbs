@@ -1,21 +1,29 @@
 namespace SwSh;
 
-file_extension "prmb";
+struct HashStruct {
+    Hash:uint64;
+    unk:uint32;
+}
+
+
+table UnkTable {
+    unk0:string;
+}
 
 table Entry {
-    unk:int;
-    unk2:int;
-    unk3:int;
-    unk4:int;
+    unk:int32;
+    unk2:int32;
+    unk3:int32;
+    unk4:int32;
 }
 
 table Entry2 {
-    b1:byte;
-    b2:byte;
+    unk0:byte;
+    unk1:UnkTable;
 }
 
 table Entry3 {
-    hash:ulong;
+    hash:HashStruct;
     num:uint;
 }
 

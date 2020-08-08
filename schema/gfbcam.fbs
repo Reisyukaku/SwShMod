@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "gfbcam";
-
 table tab2 {
     f0:uint;
     f1:float;

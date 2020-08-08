@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "bin";
-
 table Dirs {
     FileHash:ulong;
     ContentHashes:[ulong];

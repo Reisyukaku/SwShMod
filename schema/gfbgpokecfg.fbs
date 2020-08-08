@@ -1,38 +1,45 @@
 namespace SwSh;
 
-file_extension "gfbgpokecfg";
+table Mesh {
+    Name:string;
+}
+
+table UnkTable2 {
+    unk0:uint32;
+    unk1:uint32;
+}
 
 table PokeGConfig {
     unk:int;
     unk2:int;
-    unk3:ushort;
+    DexNum:ushort;
     unk4:ushort;
-    test5:float;
-    test6:int;
-    test7:float;
-    test8:float;
-    test9:float;
-    test0:float;
-    test11:float;
-    test13:float;
-    test14:float;
-    test15:float;
-    test16:float;
-    test17:float;
-    test18:float;
-    test19:float;
-    test10:float;
-    test21:float;
-    test31:float;
-    test41:float;
-    test51:float;
-    test61:float;
-    test71:float;
-    test81:float;
-    test91:float;
-    test01:float;
-    test001:int;
-    test0001:int;
+    unk5:float;
+    unk6:int;
+    unk7:float;
+    unk8:byte;
+    unk9:float;
+    unk10:float;
+    unk12:float;
+    unk13:float;
+    unk14:float;
+    unk15:float;
+    unk16:float;
+    unk17:float;
+    unk18:float;
+    unk19:float;
+    unk20:float;
+    unk21:float;
+    unk22:float;
+    unk23:float;
+    unk24:float;
+    unk25:float;
+    unk26:float;
+    unk27:float;
+    unk28:float;
+    unk29:float;
+    Meshes:[Mesh];
+    unk31:UnkTable2;
 }
 
 root_type PokeGConfig;

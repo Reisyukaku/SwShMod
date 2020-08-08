@@ -1,14 +1,21 @@
 namespace SwSh;
 
-file_extension "gfbtml";
-
 table Event {
-t:uint;
-j:string;
+    Object:string;
+    Action:string;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
 }
 
 table TML {
-    Events:[Event];
+    Sequence:[Event];
+    Unk:uint32;
+    unk0:uint32;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
 }
 
 root_type TML;

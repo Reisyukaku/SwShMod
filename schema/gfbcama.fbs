@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "gfbcama";
-
 table animConfig {
     Unknown:uint;
     KeyFrames:uint;

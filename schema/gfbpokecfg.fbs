@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "gfbpokecfg";
-
 table meshEntry {
   isEnabled:uint8;
   meshName:string;
@@ -13,7 +11,7 @@ table meshEntries {
 
 table meshTable {
   undef_0:uint32;
-  meshTable:[meshEntries];
+  Table:[meshEntries];
 }
 
 table materialEntry {

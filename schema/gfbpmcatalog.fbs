@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "gfbpmcatalog";
-
 enum Gend : byte {Male = 0, Female =  1}
 
 table Meta {

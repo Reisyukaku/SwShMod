@@ -1,7 +1,5 @@
 namespace SwSh;
 
-file_extension "bin";
-
 table Script {
     Hash:uint64;
     Amx:string;

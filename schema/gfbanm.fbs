@@ -1,16 +1,14 @@
 namespace Gfbanim;
 
-file_extension "gfbanm";
-
 union TriggerParams { 
 TriggerParameterInt , TriggerParameterFloat,
 TriggerParameterByte, TriggerParameterString 
 }
 
-union VectorTrack { FixedVectorTrack, DynamicVectorTrack, Framed16VectorTrack, Framed8VectorTrack }
-union RotationTrack { FixedRotationTrack, DynamicRotationTrack, Framed16RotationTrack ,Framed8RotationTrack }
-union BooleanTrack { FixedBooleanTrack, DynamicBooleanTrack, Framed16BooleanTrack, Framed8BooleanTrack  }
-union ValueTrack { FixedValueTrack, DynamicValueTrack, Framed16ValueTrack, Framed8ValueTrack }
+union VectorTrack { FixedVectorTrack, DynamicVectorTrack, FramedVectorTrack }
+union RotationTrack { FixedRotationTrack, DynamicRotationTrack, FramedRotationTrack }
+union BooleanTrack { FixedBooleanTrack, DynamicBooleanTrack, FramedBooleanTrack }
+union ValueTrack { FixedValueTrack, DynamicValueTrack, FramedValueTrack }
 
 enum RotationFlags:ushort (bit_flags) { 
   Orientation = 0,
@@ -130,31 +128,20 @@ table FixedVectorTrack {
 table DynamicVectorTrack {
     Values:[Vector3];
 }
-
-table Framed16VectorTrack {
+table FramedVectorTrack {
     Frames:[ushort];
     Values:[Vector3];
 }
 
-table Framed8VectorTrack {
-    Frames:[ubyte];
-    Values:[Vector3];
-}
 
 table FixedRotationTrack {
     Value:Rotation;
 }
-
 table DynamicRotationTrack {
     Values:[Rotation];
 }
-table Framed16RotationTrack {
+table FramedRotationTrack {
     Frames:[ushort];
-    Values:[Rotation];
-}
-
-table Framed8RotationTrack {
-    Frames:[ubyte];
     Values:[Rotation];
 }
 
@@ -164,15 +151,11 @@ table FixedBooleanTrack {
 table DynamicBooleanTrack {
     Values:[ushort];
 }
-table Framed16BooleanTrack {
+table FramedBooleanTrack {
     Frames:[ushort];
     Values:[ushort];
 }
 
-table Framed8BooleanTrack {
-    Frames:[ubyte];
-    Values:[ushort];
-}
 
 table FixedValueTrack {
     Value:float;
@@ -180,15 +163,11 @@ table FixedValueTrack {
 table DynamicValueTrack {
     Values:[float];
 }
-table Framed16ValueTrack {
+table FramedValueTrack {
     Frames:[ushort];
     Values:[float];
 }
 
-table Framed8ValueTrack {
-    Frames:[ubyte];
-    Values:[float];
-}
 
 table FrameRanges {
     StartFrames:[ushort];
